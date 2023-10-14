@@ -14,7 +14,6 @@ public class Main {
             int phone4 = 696512;
             int phone5 = 985627;
             int phone6 = 987523;
-            int phone7 = 987452;
 //добавление номеров в книгу
         PhoneBook myPhoneBook = new PhoneBook();
         myPhoneBook.add(name1, phone1);
@@ -56,7 +55,7 @@ class PhoneBook {
 
     public static void getPhoneBook() {
 // Ввывод всей телефонной книги (отсортирован)
-        List<Map.Entry<String, HashSet<Integer>>> list = new ArrayList<>(phoneBook.entrySet());
+        ArrayList<Map.Entry<String, HashSet<Integer>>> list = new ArrayList<>(phoneBook.entrySet());
         list.sort((a1, b1) -> b1.getValue().size() - a1.getValue().size());
 
         for (Map.Entry<String, HashSet<Integer>> el : list) {
