@@ -59,8 +59,8 @@ class PhoneBook {
         List<Map.Entry<String, HashSet<Integer>>> list = new ArrayList<>(phoneBook.entrySet());
         list.sort((a1, b1) -> b1.getValue().size() - a1.getValue().size());
 
-        for (Map.Entry<String, HashSet<Integer>> entry : list) {
-            System.out.println(entry.getKey() + " - " + entry.getValue());
+        for (Map.Entry<String, HashSet<Integer>> el : list) {
+            System.out.println(el.getKey() + " - " + el.getValue());
         }
     }
 }
